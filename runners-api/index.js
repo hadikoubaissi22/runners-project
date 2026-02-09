@@ -15,7 +15,12 @@ app.use(cors({
 }));
 
 /* ✅ HANDLE PREFLIGHT */
-app.options('*', cors());
+app.options('*', (req, res) => {
+  res.header('Access-Control-Allow-Origin', 'https://runners-project.vercel.app');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  res.sendStatus(200);
+});
 
 app.use(express.json());
 

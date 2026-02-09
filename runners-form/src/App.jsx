@@ -285,9 +285,9 @@ export default function RunnerRegistration() {
               Something went wrong. Please try again.
             </div>
           )}
-          <div className="text-slate-400 text-xs text-center md:text-left">
+          {/* <div className="text-slate-400 text-xs text-center md:text-left">
             By joining, you agree to our <a href="#" className="underline hover:text-indigo-500">Terms of Service</a>.
-          </div>
+          </div> */}
           
           <button 
             disabled={loading} 
@@ -301,7 +301,7 @@ export default function RunnerRegistration() {
             ) : (
               <>
                 Confirm Registration
-                <span className="bg-white/20 px-2 py-0.5 rounded text-xs">FREE</span>
+                {/* <span className="bg-white/20 px-2 py-0.5 rounded text-xs">FREE</span> */}
               </>
             )}
           </button>
