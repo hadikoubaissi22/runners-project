@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import runnersRoutes from './routes/runners.js';
+import runnersRoutes from '../routes/runners.js';
 
 dotenv.config();
 
