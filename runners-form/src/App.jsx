@@ -6,6 +6,7 @@ import {
   Calendar, Clock, CheckCircle, 
   Loader2, Trophy, Footprints, MessageSquare 
 } from 'lucide-react';
+import Swal from 'sweetalert2';
 
 const daysList = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
@@ -35,7 +36,12 @@ export default function RunnerRegistration() {
       .map(d => ({ day: d, time: data.days[d].time }));
 
     if (!selectedDays.length) {
-      alert('Please select at least one training day.');
+      Swal.fire({
+        icon: 'warning',
+        title: 'Oops!',
+        text: 'Please select at least one training day.',
+        confirmButtonText: 'OK'
+      });
       return;
     }
 
@@ -77,7 +83,7 @@ export default function RunnerRegistration() {
           </div>
           <h2 className="text-3xl font-bold text-slate-800">You're In!</h2>
           <p className="text-slate-500">
-            Thanks for joining the Runners Group. We've sent a confirmation to your phone. Get your running shoes ready!
+            Thanks for joining the Runners Group. Get your running shoes ready!
           </p>
           <button 
             onClick={() => setStatus('idle')}
@@ -138,7 +144,9 @@ export default function RunnerRegistration() {
                   <Phone className="absolute left-3 top-3 text-slate-400" size={18} />
                   <input 
                     {...register('phone', { required: "Phone is required" })} 
-                    placeholder="+1 (555) 000-0000" 
+                    placeholder="70931620" 
+                    max={8}
+                    type='number'
                     className={`w-full pl-10 pr-4 py-2.5 bg-slate-50 border rounded-xl focus:ring-2 focus:ring-indigo-500 outline-none transition-all ${errors.phone ? 'border-red-300 bg-red-50' : 'border-slate-200'}`} 
                   />
                 </div>
@@ -206,8 +214,9 @@ export default function RunnerRegistration() {
                   >
                     <option value="">Select...</option>
                     <option value="5K">5K</option>
+                    <option value="7K">7K</option>
                     <option value="10K">10K</option>
-                    <option value="Half">Half Marathon</option>
+                    {/* <option value="Half">Half Marathon</option> */}
                   </select>
                 </div>
                 <ErrorMsg error={errors.preferred_distance} />
@@ -215,7 +224,7 @@ export default function RunnerRegistration() {
             </div>
 
              <div>
-                <label className="block text-sm font-medium text-slate-700 mb-1">Any medical conditions or comments?</label>
+                <label className="block text-sm font-medium text-slate-700 mb-1">Any preferred location to run or comments?</label>
                 <div className="relative">
                   <MessageSquare className="absolute left-3 top-3 text-slate-400" size={18} />
                   <textarea 
