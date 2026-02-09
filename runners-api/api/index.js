@@ -24,6 +24,6 @@ app.options('*', (req, res) => {
 
 app.use(express.json());
 
-app.use('/', runnersRoutes);
+app.use('/api', runnersRoutes);
 
 export default app;
