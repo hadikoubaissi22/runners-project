@@ -156,6 +156,7 @@ export default function RunnerRegistration() {
                     })}
                     placeholder="70931620"
                     type="text"
+                    inputMode="numeric"
                     maxLength={8}
                     className={`w-full pl-10 pr-4 py-2.5 bg-slate-50 border rounded-xl focus:ring-2 focus:ring-indigo-500 outline-none transition-all ${
                       errors.phone ? 'border-red-300 bg-red-50' : 'border-slate-200'
