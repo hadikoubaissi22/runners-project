@@ -1,18 +1,27 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import router from './routes.js';
-
+import runnersRoutes from './routes/runners.js';
 
 dotenv.config();
 
-
 const app = express();
-app.use(cors());
+
+/* ✅ CORS CONFIG */
+app.use(cors({
+  origin: [
+    'https://runners-project.vercel.app',
+    'https://runners-form.vercel.app'
+  ],
+  methods: ['GET', 'POST', 'OPTIONS'],
+  allowedHeaders: ['Content-Type'],
+}));
+
 app.use(express.json());
 
+/* ✅ IMPORTANT: allow preflight */
+app.options('*', cors());
 
-app.use('/api', router);
+app.use('/api', runnersRoutes);
 
-
-app.listen(3000, () => console.log('API running'));
+export default app;
