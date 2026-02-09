@@ -131,7 +131,7 @@ export default function RunnerRegistration() {
                   <User className="absolute left-3 top-3 text-slate-400" size={18} />
                   <input 
                     {...register('full_name', { required: "Name is required" })} 
-                    placeholder="e.g. John Doe" 
+                    placeholder="e.g. Hadi Koubaissi" 
                     className={`w-full pl-10 pr-4 py-2.5 bg-slate-50 border rounded-xl focus:ring-2 focus:ring-indigo-500 outline-none transition-all ${errors.full_name ? 'border-red-300 bg-red-50' : 'border-slate-200'}`} 
                   />
                 </div>
