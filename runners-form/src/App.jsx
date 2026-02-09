@@ -99,20 +99,20 @@ export default function RunnerRegistration() {
         {/* Header Section */}
         <div className="bg-slate-900 p-8 text-white flex flex-col md:flex-row justify-between items-center gap-4">
           <div>
-            <h1 className="text-3xl font-bold flex items-center gap-3">
+            <h1 className="text-xl font-bold flex items-center gap-3">
               <span className="bg-indigo-500 p-2 rounded-lg">🏃</span> 
               Runners Group
             </h1>
             <p className="text-slate-400 mt-2 text-sm">Join the community. Push your limits.</p>
           </div>
-          <div className="hidden md:block text-right">
+          <div className="text-right">
             <p className="text-xs font-semibold uppercase tracking-wider text-indigo-400">Next Season</p>
             <p className="text-lg font-medium">Spring 2026</p>
           </div>
         </div>
 
         {/* Main Content Grid */}
-        <div className="p-8 grid grid-cols-1 md:grid-cols-12 gap-8">
+        <div className="p-4 grid grid-cols-1 md:grid-cols-12 gap-4">
           
           {/* Left Column: Personal Info */}
           <div className="md:col-span-7 space-y-6">
@@ -229,7 +229,7 @@ export default function RunnerRegistration() {
           </div>
 
           {/* Right Column: Schedule */}
-          <div className="md:col-span-5 bg-slate-50 rounded-2xl p-6 border border-slate-100">
+          <div className="md:col-span-5 bg-slate-50 rounded-2xl p-2 border border-slate-100">
             <div className="flex items-center gap-2 mb-1">
               <Calendar className="text-indigo-600" size={20} />
               <h3 className="text-lg font-bold text-slate-800">Weekly Schedule</h3>
@@ -262,7 +262,7 @@ export default function RunnerRegistration() {
 
                     {/* Time Input with transition */}
                     <div className={`flex items-center gap-2 transition-all duration-300 ${isChecked ? 'opacity-100 translate-x-0' : 'opacity-30 translate-x-2 pointer-events-none'}`}>
-                      <Clock size={14} className="text-slate-400" />
+                      {/* <Clock size={14} className="text-slate-400" /> */}
                       <input 
                         type="time" 
                         defaultValue="06:00"
