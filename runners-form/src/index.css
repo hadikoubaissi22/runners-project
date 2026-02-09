@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.input {
+@apply w-full border rounded-xl p-3;
+}
