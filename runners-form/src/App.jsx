@@ -280,15 +280,6 @@ export default function RunnerRegistration() {
 
         {/* Footer / Submit */}
         <div className="p-8 bg-slate-50 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-4">
-           {status === 'error' && (
-            <div className="text-red-500 text-sm font-medium flex items-center gap-2 animate-pulse">
-              Something went wrong. Please try again.
-            </div>
-          )}
-          {/* <div className="text-slate-400 text-xs text-center md:text-left">
-            By joining, you agree to our <a href="#" className="underline hover:text-indigo-500">Terms of Service</a>.
-          </div> */}
-          
           <button 
             disabled={loading} 
             className="w-full md:w-auto bg-slate-900 text-white px-8 py-3 rounded-xl font-bold hover:bg-indigo-600 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-70 disabled:hover:bg-slate-900 disabled:cursor-not-allowed"
@@ -305,6 +296,14 @@ export default function RunnerRegistration() {
               </>
             )}
           </button>
+           {status === 'error' && (
+            <div className="text-red-500 text-sm font-medium flex items-center gap-2 animate-pulse">
+              Something went wrong. Please try again.
+            </div>
+          )}
+          {/* <div className="text-slate-400 text-xs text-center md:text-left">
+            By joining, you agree to our <a href="#" className="underline hover:text-indigo-500">Terms of Service</a>.
+          </div> */}
         </div>
       </form>
     </div>
