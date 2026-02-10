@@ -145,6 +145,10 @@ export default function RunnerRegistration() {
                   <input
                     {...register('phone', {
                       required: "Phone is required",
+                      minLength: {
+                        value: 8,
+                        message: 'Phone number must be exactly 8 digits'
+                      },
                       maxLength: {
                         value: 8,
                         message: "Phone number must be 8 digits or less"
