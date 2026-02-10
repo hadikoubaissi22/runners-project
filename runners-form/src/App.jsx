@@ -193,8 +193,8 @@ export default function RunnerRegistration() {
                     className={`w-full pl-10 pr-4 py-2.5 bg-slate-50 border rounded-xl focus:ring-2 focus:ring-indigo-500 outline-none appearance-none ${errors.pace ? 'border-red-300' : 'border-slate-200'}`}
                   >
                     <option value="">Select...</option>
-                    <option value="Easy">Easy (6:00+ /km)</option>
-                    <option value="Moderate">Moderate (5:00 /km)</option>
+                    <option value="Easy">Easy (6:30+ /km)</option>
+                    <option value="Moderate">Moderate (5:00 - 6:00 /km)</option>
                     <option value="Fast">Fast (&lt;4:30 /km)</option>
                   </select>
                 </div>
